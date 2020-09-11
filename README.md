@@ -1,7 +1,7 @@
 # Building on OS X
 
 ```sh
-$ brew install cmake openssl mysql-client
+$ brew install cmake openssl mysql-client boost
 $ export PATH=/usr/local/Cellar/mysql-client/8.0.21/bin/:"$PATH"
 $ mkdir _build
 $ cd _build
