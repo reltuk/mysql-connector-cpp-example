@@ -1,10 +1,15 @@
 #include <iostream>
 
-#include <mysqlx/xdevapi.h>
-using namespace ::mysqlx;
+#include "mysql_driver.h"
 
 int main(int argc, char **argv) {
 	std::cout << "Hello, world!" << std::endl;
-	const char   *url = (argc > 1 ? argv[1] : "mysqlx://root@127.0.0.1");
-	Session sess(url);
+
+	sql::mysql::MySQL_Driver *driver;
+	sql::Connection *con;
+
+	driver = sql::mysql::get_mysql_driver_instance();
+	con = driver->connect("tcp://127.0.0.1:3306", "user", "password");
+
+	delete con;
 }
