@@ -15,7 +15,7 @@ happen to be installed...
 # Build on Ubuntu / Debian
 
 ```sh
-$ apt-get install g++ cmake libssl-dev
+$ apt-get install g++ cmake libmysqlcppconn-dev
 $ mkdir _build
 $ cd _build
 $ cmake ..
